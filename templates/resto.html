@@ -293,22 +293,6 @@
           role="document"
         >
           <div class="modal-content">
-            <!-- <div class="modal-header">
-              <h6
-                class="modal-title font-weight-normal"
-                id="modal-title-notification"
-              >
-                Recipe
-              </h6>
-              <button
-                type="button"
-                class="btn-close text-dark"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-            </div> -->
             <div class="modal-body">
               <div class="py-3 text-center">
                 <h4 class="text-gradient text-success">Recipes</h4>
@@ -377,8 +361,8 @@
                 </div>
                 <div class="card-body">
                   <form role="form text-left">
-                    <div class="input-group input-group-outline my-3">
-                      <label class="form-label">Start</label>
+                    <div class="input-group input-group-static my-3">
+                      <label>Start</label>
                       <input
                         type="time"
                         id="appt-start"
@@ -391,8 +375,8 @@
                         onfocusout="defocused(this)"
                       />
                     </div>
-                    <div class="input-group input-group-outline my-3">
-                      <label class="form-label">Until</label>
+                    <div class="input-group input-group-static my-3">
+                      <label>Until</label>
                       <input
                         type="time"
                         id="appt-until"
@@ -405,8 +389,8 @@
                         onfocusout="defocused(this)"
                       />
                     </div>
-                    <div class="input-group input-group-outline my-3">
-                      <label class="form-label">Portion</label>
+                    <div class="input-group input-group-static my-3">
+                      <label>Portion</label>
                       <input
                         type="number"
                         class="form-control"
@@ -418,12 +402,14 @@
                       <button
                         type="button"
                         class="btn btn-round bg-gradient-success btn-lg w-100 mt-4 mb-0"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal-notification-when-click-launch-button-in-buffet-go-menu"
                       >
                         Launch !
                       </button>
                       <button
                         type="button"
-                        class="btn btn-round bg-gradient-warning btn-lg w-100 mt-1 mb-0"
+                        class="btn btn-round bg-gradient-primary btn-lg w-100 mt-1 mb-0"
                         data-bs-dismiss="modal"
                       >
                         Close
@@ -438,6 +424,57 @@
       </div>
     </div>
     <!-- Modal Buffet Go -->
+
+    <!-- Modal Notification when click "Launch" button in buffet go menu -->
+    <div class="col-md-4">
+      <div
+        class="modal fade"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        id="modal-notification-when-click-launch-button-in-buffet-go-menu"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-notification-when-click-launch-button-in-buffet-go-menu"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-danger modal-dialog-centered modal-"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="py-3 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="75"
+                  viewBox="0 0 24 24"
+                  width="75"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42zM18 11c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2v-5zm-6 11c.14 0 .27-.01.4-.04.65-.14 1.18-.58 1.44-1.18.1-.24.15-.5.15-.78h-4c.01 1.1.9 2 2.01 2z"
+                  />
+                </svg>
+                <h4 class="text-gradient text-danger mt-4">
+                  Buffet Go Sent Successfully
+                </h4>
+                <p>Your menu will appear on the user page notification</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-link text-primary ml-auto"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Modal Notification when click "Launch" button in buffet go menu -->
 
     <!--   Core JS Files   -->
     <script src="{{ url_for('static', filename='assets/js/core/popper.min.js') }}"></script>

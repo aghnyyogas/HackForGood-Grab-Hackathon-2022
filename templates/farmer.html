@@ -165,6 +165,13 @@
                     >
                       <led>100 Kg</led>
                     </button>
+                    <button
+                      class="btn btn-success w-100"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-buffet-go-farmer"
+                    >
+                      <led>Buffet Go!</led>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -193,6 +200,13 @@
                       data-bs-target="#modal-supply-per-month"
                     >
                       20 Kg
+                    </button>
+                    <button
+                      class="btn btn-success w-100"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-buffet-go-farmer"
+                    >
+                      <led>Buffet Go!</led>
                     </button>
                   </div>
                 </div>
@@ -223,6 +237,13 @@
                     >
                       <led>100 Kg</led>
                     </button>
+                    <button
+                      class="btn btn-success w-100"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-buffet-go-farmer"
+                    >
+                      <led>Buffet Go!</led>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -232,7 +253,7 @@
       </div>
     </main>
 
-    <!-- Modal Buffet Go -->
+    <!-- Modal Suplly for Month -->
     <div class="col-12 col-md-4">
       <div
         class="modal fade"
@@ -289,21 +310,34 @@
                       <div class="text-start">
                         <ul class="list-group list-group-flush">
                           <li class="list-group-item">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Vero, eligendi.
+                            <p class="mb-0">
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Vero, eligendi.
+                            </p>
                           </li>
                           <li class="list-group-item">
-                            Lorem ipsum dolor sit amet consectetur adipisicing.
+                            <p class="mb-0">
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Vero, eligendi.
+                            </p>
                           </li>
                           <li class="list-group-item">
-                            Lorem ipsum dolor sit amet consectetur.
+                            <p class="mb-0">
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Vero, eligendi.
+                            </p>
                           </li>
                           <li class="list-group-item">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit.
+                            <p class="mb-0">
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Vero, eligendi.
+                            </p>
                           </li>
                           <li class="list-group-item">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing.
+                            <p class="mb-0">
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Vero, eligendi.
+                            </p>
                           </li>
                         </ul>
                       </div>
@@ -369,7 +403,7 @@
                       </div>
                       <button
                         type="button"
-                        class="btn btn-round bg-gradient-warning btn-lg mt-1 mb-0"
+                        class="btn btn-round bg-gradient-primary btn-lg mt-1 mb-0"
                         data-bs-dismiss="modal"
                       >
                         Close
@@ -383,7 +417,149 @@
         </div>
       </div>
     </div>
-    <!-- Modal Buffet Go -->
+    <!-- End Of Modal Supply For Month -->
+
+    <!-- Modal Buffet Go Farmer -->
+    <div class="col-md-4">
+      <div
+        class="modal fade"
+        id="modal-buffet-go-farmer"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-buffet-go-farmer"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-sm"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="card card-plain">
+                <div class="card-header pb-0 text-left">
+                  <h5 class="text-center text-success">Buffet Go !</h5>
+                  <p class="mb-0 text-center">
+                    Enter your duration and portion
+                  </p>
+                </div>
+                <div class="card-body">
+                  <form role="form text-left">
+                    <div class="input-group input-group-static my-3">
+                      <label>Start</label>
+                      <input
+                        type="time"
+                        id="appt-start"
+                        name="appt"
+                        min="09:00"
+                        max="23:00"
+                        required
+                        class="form-control"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                      />
+                    </div>
+                    <div class="input-group input-group-static my-3">
+                      <label>Until</label>
+                      <input
+                        type="time"
+                        id="appt-until"
+                        name="appt"
+                        min="09:00"
+                        max="23:00"
+                        required
+                        class="form-control"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                      />
+                    </div>
+                    <div class="input-group input-group-static my-3">
+                      <label>Portion</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                      />
+                    </div>
+                    <div class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-round bg-gradient-success btn-lg w-100 mt-4 mb-0"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal-notification-when-click-launch-button-in-buffet-go-menu"
+                      >
+                        Launch !
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-round bg-gradient-primary btn-lg w-100 mt-1 mb-0"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Modal Buffet Go Farmer -->
+
+    <!-- Modal Notification when click "Launch" button in buffet go menu -->
+    <div class="col-md-4">
+      <div
+        class="modal fade"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        id="modal-notification-when-click-launch-button-in-buffet-go-menu"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-notification-when-click-launch-button-in-buffet-go-menu"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-danger modal-dialog-centered modal-"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="py-3 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="75"
+                  viewBox="0 0 24 24"
+                  width="75"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42zM18 11c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2v-5zm-6 11c.14 0 .27-.01.4-.04.65-.14 1.18-.58 1.44-1.18.1-.24.15-.5.15-.78h-4c.01 1.1.9 2 2.01 2z"
+                    fill="#7b809a"
+                  />
+                </svg>
+                <h4 class="text-gradient text-danger mt-4">
+                  Buffet Go Sent Successfully
+                </h4>
+                <p>Your menu will appear on the user page notification</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-link text-primary ml-auto"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--   Core JS Files   -->
     <script src="{{ url_for('static', filename='assets/js/core/popper.min.js') }}"></script>

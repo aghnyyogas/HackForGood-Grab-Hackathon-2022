@@ -23,7 +23,16 @@ mysql = MySQL(app)
 
 @app.route("/")
 def sign_in_page():
-    return render_template('sign_in.html')
+    return render_template('index.html')
+
+
+@app.route("/logout")
+def logout():
+    return render_template('index.html')
+
+# @app.route("/")
+# def sign_in_page():
+#     return render_template('sign_in.html')
 
 
 @app.route("/home", methods=["GET", "POST"])
@@ -55,14 +64,9 @@ def resto():
     return render_template('resto.html')
 
 
-@app.route("/food",  methods=["GET", "POST"])
+@app.route("/user_food")
 def food():
     return render_template('user_food.html')
-
-
-@app.route("/logout")
-def logout():
-    return render_template('sign_in.html')
 
 
 if __name__ == "__main__":
